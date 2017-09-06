@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,200" rel="stylesheet">
+<style>
+* {
+	text-align: center;
+	font-family: 'Roboto Condensed';
+}
+#pContainer {
+	position: absolute;
+	max-width: 50%;
+	right: 25%;
+}
+</style>
+</head>
+<body>
+<h1>Scratch Player 3</h1>
+<h2>Update Available!</h2>
+<div id="pContainer">
+<p>Hi!<br>Thanks for using Scratch Player 3 extension!<br>You're recieving this message because there is a update available for Scratch Player 3.</p>
+<p>If you don't care about any new features, you don't need to update. But I recommend you do update the extension, because it contains many improvements and new features.</p>
+<p><b>New Version: </b><span id="versionNumber">loading...</span></p>
+<a href="https://jgames101.github.io/scratch-player-3/"><button>Update!</button></a>
+</div>
+<script>
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        document.getElementById("versionNumber").innerHTML = myObj.version;
+    }
+};
+xmlhttp.open("GET", "https://jgames101.github.io/scratch-player-3/latest.json", true);
+xmlhttp.send();
+</script>
+</body>
