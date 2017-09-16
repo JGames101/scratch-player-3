@@ -12,10 +12,8 @@
 <noscript>
 <object id="jsmissing" data="/jsmissing.html" width="100%" height="48px"></object> <!-- The alert for JavaScript being disabled. -->
 </noscript>
-<div id="menuButton" onclick="javascript:toggleMenu()"> <!-- For opening control menu -->
-	<div class="line"></div>
-	<div class="line"></div>
-	<div class="line"></div>
+<div id="menuButton" onclick="javascript:toggleMenu()" style="overflow:hidden;"> <!-- For opening control menu -->
+	<i class="material-icons md-light md-32" id="menuToggle">keyboard_arrow_right</i>
 </div>
 <div id="menu" contextmenu="navigationContext">
 	<div id="menuTextBox">
@@ -29,15 +27,16 @@
 		<p class="menuItem" id="optionsButton" onclick="javascript:setPage('/options/')">OPTIONS</p>
 	</div>
 	<div id="menuIconBox">
-		<img class="menuIcon" id="homeIcon" src="/images/home.png" width="32px" onclick="javascript:setPage('/')">
-		<img class="menuIcon" id="updatesIcon" src="/images/updates.png" width="32px" onclick="javascript:setPage('/updates/')">
-		<img class="menuIcon" id="angularIcon" src="/images/angularJS.png" width="32px" onclick="javascript:setPage('/angular/')">
-		<img class="menuIcon" id="javascriptIcon" src="/images/javascript.png" width="32px" onclick="javascript:setPage('/javascript/')">
-		<img class="menuIcon" id="jqueryIcon" src="/images/jquery.png" width="32px" onclick="javascript:setPage('/jquery/')">
-		<img class="menuIcon" id="html5Icon" src="/images/html.png" width="32px" onclick="javascript:setPage('/html5/')">
-		<img class="menuIcon" id="optionsIcon" src="/images/options.png" width="32px" onclick="javascript:setPage('/options/')">
+		<i class="material-icons md-light md-32 menuIcon" id="homeIcon" onclick="javascript:setPage('/')">home</i>
+		<i class="material-icons md-light md-32 menuIcon" id="updatesIcon" onclick="javascript:setPage('/updates/')">history</i>
+		<img class="menuIcon" id="angularIcon" src="/images/angularJS.png" width="30px" onclick="javascript:setPage('/angular/')">
+		<img class="menuIcon" id="javascriptIcon" src="/images/javascript.png" width="30px" onclick="javascript:setPage('/javascript/')">
+		<img class="menuIcon" id="jqueryIcon" src="/images/jquery.png" width="30px" onclick="javascript:setPage('/jquery/')">
+		<i class="material-icons md-light md-32 menuIcon" id="html5Icon" onclick="javascript:setPage('/html5/')">web</i>
+		<i class="material-icons md-light md-32 menuIcon" id="optionsIcon" onclick="javascript:setPage('/options/')">settings</i>
 	</div>
 </div>
+
 <div id="page">
 <h1 id="pageName">Scratch Player 3 | JGames101</h1>
 <div class="colourBackground">
@@ -55,7 +54,7 @@
 		<h2>DOWNLOAD</h2>
 		<p>Download the Extension:<p>
 		<a href="/scratch-player-3/SP3.1.2.1.zip" download><div id="downloadButton">Download SP3.1.2.1.zip version 1.2.1 for Chrome</div></a>
-		<a href="/scratch-player-3/SP3.1.2.2.firefox.xpi" download><div id="downloadButton">Install SP3 version 1.2.2.firefox for Firefox</div></a>
+		<a href="https://addons.mozilla.org/firefox/downloads/file/724034/scratch_player_3-1.2.2-an+fx.xpi?src=dp-btn-primary" download><div id="downloadButton">Install SP3 version 1.2.2.firefox for Firefox</div></a>
 		<h2>USERSCRIPT</h2>
 		<a href="https://greasyfork.org/scripts/32912-jgames101-s-scratch-player-3/code/JGames101's%20Scratch%20Player%203.user.js">Install the Userscript</a><br>
 	</div>
